@@ -122,6 +122,9 @@ class PlaceholderFragment : Fragment(), Injectable, NewsListAdapterInterface {
         pageViewModel.getNews().observe(viewLifecycleOwner, {
             if (it != null) {
                 adapter.submitList(it)
+                if(it.size >0){
+                    binding.viewPrg.visibility = View.GONE
+                }
             }
         })
 

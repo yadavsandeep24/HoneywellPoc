@@ -78,6 +78,7 @@ class NewsListAdapter(
                     viewHolder.itemView.news_row_item.background =
                         ctx.getDrawable(R.drawable.top_curve_background)
                 }
+
                 news?.let {
                     it.title?.let {
                         viewHolder.itemView.newsTitle.text = news.title
